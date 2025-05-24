@@ -1,0 +1,179 @@
+/* Reset de estilos padrão e configuração da caixa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base do corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb; /* Cor de fundo clara */
+  color: #111827; /* Cor do texto escura */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Container centralizador com largura máxima */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #1e293b; /* Cor escura de fundo */
+  color: white; /* Texto branco */
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título no cabeçalho */
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* Lista de navegação horizontal */
+nav ul {
+  list-style: none; /* Remove marcadores */
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Espaço entre os itens */
+  margin-top: 10px;
+}
+
+/* Links de navegação */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Transição suave de cor ao passar o mouse */
+}
+
+/* Efeito hover nos links do menu */
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Banner com imagem de fundo */
+.banner {
+  background: url('https://images.unsplash.com/photo-1618005182384-a83a8c3036c3') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Título do banner */
+.banner h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px #000; /* Sombra no texto para contraste */
+}
+
+/* Parágrafo do banner */
+.banner p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Seções principais */
+section {
+  padding: 60px 0;
+}
+
+/* Títulos das seções */
+section h2 {
+  text-align: center;
+  color: #1e40af; /* Azul forte */
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Parágrafos e listas dentro das seções */
+section p, section ul {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Estilo dos itens da lista */
+ul li {
+  background-color: #e2e8f0; /* Cor de fundo leve */
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Rodapé */
+footer {
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Estilo padrão para todos os links */
+a {
+  color: #2563eb; /* Azul */
+}
+
+/* Efeito hover para links */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px; /* Espaço menor entre os itens */
+  }
+
+  .banner h2 {
+    font-size: 2rem; /* Tamanho reduzido para títulos em telas pequenas */
+  }
+}
+
+/* Efeito de transição suave para imagens ao passar o mouse */
+img {
+  transition: transform 0.3s ease;
+  /* Suaviza o efeito de transformação */
+}
+
+img:hover {
+  transform: scale(1.1); /* Amplia a imagem em 10% ao passar o mouse */
+}
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  /* trasinsiçao suave ao mudar a cor*/
+}
+
+button:hover {
+  background-color: #388e3c;
+  /* nova cor ao passar o nome*/
+}
+
+@keyframes aparecer{
+  from{
+    opacity: 0;
+    /* começa invisivel*/
+  }
+  to{
+    opacity: 1;
+    /* fica visivel*/
+  }
+}
+
+p{
+  animation: aparecer 1s ease-in-out;
+}
